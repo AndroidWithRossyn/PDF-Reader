@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "465145517729",
+    "firebase_url": "https://qsa-books.firebaseio.com",
+    "project_id": "qsa-books",
+    "storage_bucket": "qsa-books.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465145517729:android:368e93cbdcb21c1d0282e0",
+        "android_client_info": {
+          "package_name": "com.qsa.ebooks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465145517729-u2p1bps91ntqgfq3si8hvmaannndcu28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArd1bv3BNXXUsDxyP33bTVfs8mATjZ2qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465145517729-u2p1bps91ntqgfq3si8hvmaannndcu28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

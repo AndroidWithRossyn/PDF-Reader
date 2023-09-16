@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/dual_background"
+    android:clickable="true"
+    android:translationZ="6dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listimage"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="3dp">
+
+        <ImageView
+            android:id="@+id/bookImageFavourite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/listimage"
+        android:layout_toRightOf="@+id/listimage"
+        android:text="headingLine"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/descriptionlineLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/listimage"
+        android:layout_toRightOf="@+id/listimage">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="Line2"
+            android:textColor="#A9A9A9"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timeCommentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:id="@+id/favBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_favourite" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeCommentLayout" />
+
+</RelativeLayout>

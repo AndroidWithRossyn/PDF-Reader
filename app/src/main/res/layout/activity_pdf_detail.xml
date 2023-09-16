@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#fff"
+    tools:context=".PdfDetail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+
+            <ImageView
+                android:id="@+id/background_blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="170dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/bookImage">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/bookCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/bookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookCategory"
+                    android:text="The Book"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookName"
+                    android:text="by"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/authorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookName"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/by"
+                    android:text="authorname,"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/publisherTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/by"
+                    android:text="Published"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/bookYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/authorName"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/publisherTitle"
+                    android:text="1884"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <!--<RatingBar
+                    android:id="@+id/rating"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    android:isIndicator="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@+id/by" />
+
+                    <TextView
+                        android:id="@+id/rating_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/by"
+                        android:textColor="#FFA800"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_toRightOf="@+id/rating"
+                        android:text="5.0"
+                        android:textSize="18dp" />-->
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#fff"
+                    android:src="@drawable/ic_thumb_up" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/downloadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/fab"
+                    android:backgroundTint="#fff"
+                    android:src="@drawable/ic_download" />
+
+                <Button
+                    android:id="@+id/readBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toRightOf="@+id/downloadBtn"
+                    android:background="@drawable/button1"
+                    android:text="Read"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/custom_ripple"
+                android:src="@drawable/share"/>-->
+
+            <ImageView
+                android:id="@+id/bookImage"
+                android:layout_width="102dp"
+                android:layout_height="155dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/bookcover"
+                android:elevation="10dp"
+                android:scaleType="fitXY" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/values"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/topLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:translationZ="10dp"
+
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/detailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center"
+                android:layout_gravity="center|center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/likesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/likesText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/likesText"
+                        android:text="Likes" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shareLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_toRightOf="@+id/likesLayout">
+
+                    <TextView
+                        android:id="@+id/shareText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shareText"
+                        android:text="Shares" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/reviewLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_toRightOf="@+id/shareLayout">
+
+                    <TextView
+                        android:id="@+id/reviewText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reviewText"
+                        android:text="Downloads" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/readerLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_toRightOf="@+id/reviewLayout">
+
+                    <TextView
+                        android:id="@+id/readerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/readerText"
+                        android:text="Readers" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_above="@id/adView"
+            android:id="@+id/descriptionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/values"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/cardlayout"
+            android:translationZ="10dp">
+
+            <TextView
+                android:id="@+id/title_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="8dp"
+                android:text="Description"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_description"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="14dp"
+                android:ellipsize="end"
+                android:lines="6"
+                android:text="Lorem ipsum dolor sit amet, sed menandri deserunt aliquando no, dicunt oporteat menandri usu et, vocibus abhorreant pri cu. Dolorem apeirian nam te. Et qui soluta feugiat, in minim sententiae complectitur quo. Ne solum persius sanctus vis, duo nobis molestiae dissentiet at, vel et quot omittam definitiones. Ullum blandit quo ex." />
+        </RelativeLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            >
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
+</ScrollView>

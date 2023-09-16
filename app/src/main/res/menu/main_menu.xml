@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/homeGroup">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_homeicon"
+            android:title="@string/home" />
+    </group>
+
+    <group android:id="@+id/other_items">
+        <item
+            android:id="@+id/download"
+            android:icon="@drawable/ic_download"
+            android:title="@string/downloadBooks" />
+
+        <item
+            android:id="@+id/bookmark"
+            android:icon="@drawable/ic_bookmark_filled"
+            android:title="@string/bookmarked" />
+
+    </group>
+
+    <group android:id="@+id/logoutGroup">
+        <item
+            android:id="@+id/logout"
+            android:title="@string/logout" />
+    </group>
+
+</menu>

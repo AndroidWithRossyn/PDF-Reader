@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/dual_background"
+    android:clickable="true"
+    android:translationZ="6dp">
+
+
+    <RelativeLayout
+        android:id="@+id/listimage"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:background="@drawable/booklayout"
+        >
+
+        <ImageView
+            android:id="@+id/bookImageFavourite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/listimage"
+        android:layout_toRightOf="@+id/listimage"
+        android:text="headingLine"
+        android:textColor="#777777"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/descriptionlineLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/listimage"
+        android:layout_toRightOf="@+id/listimage">
+
+        <TextView
+            android:id="@+id/categoryTitle"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Category:"
+            android:textColor="#777777"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/categoryTitle"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="category"
+            android:textColor="#777777"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/pageNoTitle"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryTitle"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Page#"
+            android:textColor="#777777"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pageNoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTitle"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/pageNoTitle"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="#777777"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/totalPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTitle"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/pageNoText"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="n"
+            android:textColor="#777777"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timeCommentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:id="@+id/favBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_bookmark_filled" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeCommentLayout" />
+
+</RelativeLayout>

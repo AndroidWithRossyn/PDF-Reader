@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookView">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:visibility="gone"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ebooks"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        >
+    </com.google.android.gms.ads.AdView>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_below="@id/adView"
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<com.cleveroad.sy.cyclemenuwidget.CycleMenuWidget
+        android:id="@+id/itemCycleMenuWidget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:cm_autoMaxRadius="220dp"
+        app:cm_autoMinRadius="10dp"
+        app:cm_corner="right_bottom"
+        app:cm_fixedRadius="200dp"
+        app:cm_radius_scale_type="auto"
+        app:cm_scroll_type="endless"
+        app:cm_item_background_tint="#449955"
+        app:cm_corner_image_src="@drawable/ic_addplusicon"
+        app:cm_ripple_color="#02802C"
+        />-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bookView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        app:menu="@menu/cycle_menu_items"
+        app:labelVisibilityMode="unlabeled"
+        app:itemTextColor="#808080"
+        android:background="@drawable/background_pdfbook"
+        app:itemIconTint="#808080"/>
+
+</RelativeLayout>
